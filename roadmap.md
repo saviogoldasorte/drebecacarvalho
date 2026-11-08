@@ -1,5 +1,5 @@
-- [ ] Site Dra. Rebeca (todas as seções)
-- [ ] Mobile: menu simples, WhatsApp sempre visível
-- [ ] Pendente: endereço, horários, Instagram (aguardando cliente)
-- [ ] SEO local: títulos, descrições, dados estruturados
-- [ ] Bloco de contato local (endereço, telefone, horário) igual aos dados estruturados
+- [x] Site Dra. Rebeca
+- [x] Mobile: menu simples, WhatsApp fixo
+- [x] SEO local + dados estruturados
+- [x] Bloco de contato local
+- [ ] Endereço, cidade, horários, modalidades, Instagram — aguardando cliente
