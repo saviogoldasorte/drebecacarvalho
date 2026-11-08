@@ -16,7 +16,7 @@ const ENDERECO = "";
 const CIDADE_ESTADO = "";
 const HORARIOS = ""; // exibido no site; no formato schema, ex.: "Mo-Fr 08:00-18:00" pode ser usado em HORARIOS_SCHEMA
 const MODALIDADES = "";
-const INSTAGRAM_USUARIO = ""; // ex.: "drarebeca"
+const INSTAGRAM_USUARIO = "_rebecacarvalho"; // ex.: "drarebeca"
 /* =================================================== */
 
 const WA_LINK = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(WHATSAPP_MENSAGEM)}`;
@@ -133,7 +133,7 @@ function Index() {
           <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 py-10 lg:grid-cols-2 lg:py-24">
             <div className="order-2 lg:order-1">
               <p className="eyebrow">Ginecologista e Obstetra</p>
-              <h1 className="mt-5 text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">Dra. Rebeca<br /><em className="text-primary/80">Carvalho Rodrigues</em></h1>
+              <h1 className="mt-5 text-5xl leading-[1.02] text-primary/80 sm:text-6xl lg:text-7xl">Dra. Rebeca<br /><em>Carvalho Rodrigues</em></h1>
               <p className="mt-6 max-w-md text-lg font-light leading-relaxed text-muted-foreground">Um cuidado atento e acolhedor para a sua saúde, em cada fase da vida da mulher.</p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <CTA />
@@ -163,7 +163,7 @@ function Index() {
               <h2 className="mt-4 text-4xl sm:text-5xl">Uma trajetória dedicada à saúde da mulher</h2>
               <dl className="mt-10 divide-y divide-border border-y border-border">
                 {[
-                  ["Formação", "Medicina — Centro Universitário Christus"],
+                  ["Formação", "Médica — Centro Universitário Christus"],
                   ["Especialização", "Em especialização em Ginecologia e Obstetrícia no Hospital Central da Polícia Militar (HCPM)"],
                   ["Pós-graduação", "Ultrassonografia ginecológica e obstétrica"],
                   ["Experiência", "Atuação no ambulatório da Leve e Pastore"],
