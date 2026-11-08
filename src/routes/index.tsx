@@ -106,7 +106,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-          <a href="#inicio" className="min-w-0 font-serif text-xl leading-none">Dra. Rebeca <span className="text-gold">Carvalho</span></a>
+          <a href="#inicio" className="min-w-0 font-serif text-xl leading-none text-gold">Dra. Rebeca Carvalho</a>
           <nav className="hidden items-center gap-7 text-sm text-muted-foreground lg:flex" aria-label="Principal">
             {NAV.map(([h, l]) => <a key={h} href={h} className="hover:text-foreground">{l}</a>)}
           </nav>
