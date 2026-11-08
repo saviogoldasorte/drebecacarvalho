@@ -1,0 +1,3 @@
+- [ ] Site Dra. Rebeca (todas as seções)
+- [ ] Mobile: menu simples, WhatsApp sempre visível
+- [ ] Pendente: endereço, horários, Instagram (aguardando cliente)
