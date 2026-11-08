@@ -14,25 +14,38 @@ const CRM = "CRM 521304941";
 // Preencha quando disponível (deixe "" para ocultar / mostrar "Informações pelo WhatsApp")
 const ENDERECO = "";
 const CIDADE_ESTADO = "";
-const HORARIOS = "";
+const HORARIOS = ""; // exibido no site; no formato schema, ex.: "Mo-Fr 08:00-18:00" pode ser usado em HORARIOS_SCHEMA
 const MODALIDADES = "";
 const INSTAGRAM_USUARIO = ""; // ex.: "drarebeca"
 /* =================================================== */
 
 const WA_LINK = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(WHATSAPP_MENSAGEM)}`;
+const CIDADE_SEO = CIDADE_ESTADO ? ` em ${CIDADE_ESTADO}` : "";
+const SEO_TITLE = `Ginecologista e Obstetra${CIDADE_SEO} | Dra. Rebeca Carvalho Rodrigues`;
+const SEO_DESC = `Dra. Rebeca Carvalho Rodrigues, ginecologista e obstetra${CIDADE_SEO}: consulta preventiva, pré-natal, reposição hormonal e planejamento reprodutivo. Agende pelo WhatsApp.`;
 const MAPS_LINK = ENDERECO
   ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${ENDERECO} ${CIDADE_ESTADO}`)}`
   : "";
 const A_CONFIRMAR = "Informações pelo WhatsApp";
 
+const ESPECIALIDADES = [
+  ["Ginecologia", "Avaliação clínica completa da saúde íntima e reprodutiva, com escuta atenta e orientação clara."],
+  ["Consulta preventiva", "Exames de rotina e rastreamento periódico para cuidar da saúde antes que surjam sintomas."],
+  ["Acompanhamento da gestação", "Pré-natal próximo e cuidadoso, com acompanhamento de cada etapa da gravidez."],
+  ["Planejamento reprodutivo", "Orientação individualizada sobre métodos contraceptivos e o desejo de engravidar."],
+  ["Terapia de reposição hormonal", "Avaliação e acompanhamento das mudanças hormonais, incluindo o climatério e a menopausa."],
+  ["Saúde da mulher", "Cuidado integral em todas as fases da vida, da adolescência à maturidade."],
+];
+
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Dra. Rebeca Carvalho Rodrigues | Ginecologista e Obstetra" },
-      { name: "description", content: "Ginecologia, obstetrícia, pré-natal, reposição hormonal e planejamento reprodutivo com a Dra. Rebeca Carvalho Rodrigues. Agende pelo WhatsApp." },
-      { property: "og:title", content: "Dra. Rebeca Carvalho Rodrigues | Ginecologista e Obstetra" },
-      { property: "og:description", content: "Cuidar da sua saúde é minha prioridade. Agende sua consulta pelo WhatsApp." },
+      { title: SEO_TITLE },
+      { name: "description", content: SEO_DESC },
+      { property: "og:title", content: SEO_TITLE },
+      { property: "og:description", content: SEO_DESC },
+      { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -45,8 +58,15 @@ export const Route = createFileRoute("/")({
         name: "Dra. Rebeca Carvalho Rodrigues",
         medicalSpecialty: ["Gynecologic", "Obstetric"],
         telephone: `+${WHATSAPP_NUMERO}`,
+        description: SEO_DESC,
+        url: "/",
         identifier: CRM,
+        availableService: ESPECIALIDADES.map(([n]) => ({ "@type": "MedicalProcedure", name: n })),
         ...(ENDERECO ? { address: { "@type": "PostalAddress", streetAddress: ENDERECO, addressLocality: CIDADE_ESTADO, addressCountry: "BR" } } : {}),
+        ...(CIDADE_ESTADO ? { areaServed: CIDADE_ESTADO } : {}),
+        ...(HORARIOS ? { openingHours: HORARIOS } : {}),
+        ...(MAPS_LINK ? { hasMap: MAPS_LINK } : {}),
+        ...(INSTAGRAM_USUARIO ? { sameAs: [`https://instagram.com/${INSTAGRAM_USUARIO}`] } : {}),
       }),
     }],
   }),
@@ -54,14 +74,6 @@ export const Route = createFileRoute("/")({
 
 const NAV = [["#sobre", "Sobre"], ["#especialidades", "Especialidades"], ["#conteudo", "Saúde feminina"], ["#atendimento", "Atendimento"], ["#contato", "Contato"]];
 
-const ESPECIALIDADES = [
-  ["Ginecologia", "Avaliação clínica completa da saúde íntima e reprodutiva, com escuta atenta e orientação clara."],
-  ["Consulta preventiva", "Exames de rotina e rastreamento periódico para cuidar da saúde antes que surjam sintomas."],
-  ["Acompanhamento da gestação", "Pré-natal próximo e cuidadoso, com acompanhamento de cada etapa da gravidez."],
-  ["Planejamento reprodutivo", "Orientação individualizada sobre métodos contraceptivos e o desejo de engravidar."],
-  ["Terapia de reposição hormonal", "Avaliação e acompanhamento das mudanças hormonais, incluindo o climatério e a menopausa."],
-  ["Saúde da mulher", "Cuidado integral em todas as fases da vida, da adolescência à maturidade."],
-];
 
 const ARTIGOS = [
   ["Por que manter o acompanhamento ginecológico", "Consultas regulares permitem identificar alterações precocemente e esclarecer dúvidas sobre o próprio corpo, mesmo sem sintomas."],
@@ -231,8 +243,8 @@ function Index() {
             <p className="eyebrow">Localização e atendimento</p>
             <h2 className="mt-4 text-4xl sm:text-5xl">Onde e quando</h2>
             <div className="mt-12 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
-              {[["Endereço", ENDERECO], ["Cidade", CIDADE_ESTADO], ["Horários", HORARIOS], ["Modalidades", MODALIDADES]].map(([t, d]) => (
-                <div key={t} className="bg-background p-7">
+              {[["Endereço", [ENDERECO, CIDADE_ESTADO].filter(Boolean).join(" — ")], ["Telefone / WhatsApp", TELEFONE_EXIBICAO], ["Horários", HORARIOS], ["Modalidades", MODALIDADES]].map(([t, d]) => (
+                <div key={t} className="bg-background p-7" itemProp={t === "Telefone / WhatsApp" ? "telephone" : undefined}>
                   <p className="text-xs uppercase tracking-[0.2em] text-gold">{t}</p>
                   <p className={`mt-3 ${d ? "" : "text-muted-foreground"}`}>{d || A_CONFIRMAR}</p>
                 </div>
