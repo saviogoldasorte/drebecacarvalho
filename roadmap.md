@@ -3,6 +3,6 @@
 - [x] SEO local + dados estruturados
 - [x] Bloco de contato local
 - [x] Publicado no endereço do Lovable
-- [x] Endereço renomeado para drebecacarvalho.lovable.app
+- [x] Endereço renomeado para drebecacarvalho.lovable.app (o antigo rebeca-carvalho-womens-care.lovable.app não abre mais)
 - [ ] rebecacarvalho.com.br não registrado: cliente vai registrar no Registro.br (ou admin compra) e depois conectar
 - [ ] Endereço, cidade, horários, modalidades — aguardando cliente (depois: atualizar e publicar de novo)
