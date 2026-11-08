@@ -1,0 +1,5 @@
+- [x] Site Dra. Rebeca
+- [x] Mobile: menu simples, WhatsApp fixo
+- [x] SEO local + dados estruturados
+- [x] Bloco de contato local
+- [ ] Endereço, cidade, horários, modalidades, Instagram — aguardando cliente
