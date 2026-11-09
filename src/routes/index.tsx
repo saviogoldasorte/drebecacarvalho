@@ -42,8 +42,9 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-           { property: "og:title", content: SEO_TITLE },
-      { property: "og:description", content: SEO_DESC },
+      { title: SEO_TITLE },
+      { name: "description", content: SEO_DESC },
+      { property: "og:title", content: SEO_TITLE },
       { property: "og:url", content: "https://dra.rebecacarvalho.com.br/" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
