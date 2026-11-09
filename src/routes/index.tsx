@@ -42,14 +42,18 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: SEO_TITLE },
-      { name: "description", content: SEO_DESC },
-      { property: "og:title", content: SEO_TITLE },
+           { property: "og:title", content: SEO_TITLE },
       { property: "og:description", content: SEO_DESC },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://dra.rebecacarvalho.com.br/" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
+      { property: "og:site_name", content: "Dra. Rebeca Carvalho Rodrigues" },
+      { property: "og:image", content: "https://dra.rebecacarvalho.com.br/og-imagem.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Dra. Rebeca Carvalho Rodrigues, ginecologista e obstetra" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://dra.rebecacarvalho.com.br/og-imagem.jpg" },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [{
