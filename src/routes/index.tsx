@@ -1,12 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import fotoSofa from "@/assets/DSC05031.jpg.asset.json";
-import fotoCelular from "@/assets/DSC05063.jpg.asset.json";
-import fotoJaleco from "@/assets/DSC05117.jpg.asset.json";
-import fotoJanela from "@/assets/DSC05210.jpg.asset.json";
+// Fotos servidas da pasta public/fotos (funcionam em qualquer hospedagem)
+const fotoSofa = { url: "/fotos/rebeca-DSC05031.jpg" };
+const fotoCelular = { url: "/fotos/rebeca-DSC05063.jpg" };
+const fotoJaleco = { url: "/fotos/rebeca-DSC05117.jpg" };
+const fotoJanela = { url: "/fotos/rebeca-DSC05210.jpg" };
 
 /* ================= DADOS EDITÁVEIS ================= */
-const WHATSAPP_NUMERO = "558599297113";
+const WHATSAPP_NUMERO = "5585999297113";
 const WHATSAPP_MENSAGEM =
   "Olá! Encontrei o site da Dra. Rebeca e gostaria de informações sobre consultas e disponibilidade de horários.";
 const TELEFONE_EXIBICAO = "(85) 9929-7113";
