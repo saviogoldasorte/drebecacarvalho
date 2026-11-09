@@ -10,7 +10,7 @@ const fotoJanela = { url: "/fotos/rebeca-DSC05210.jpg" };
 const WHATSAPP_NUMERO = "5585999297113";
 const WHATSAPP_MENSAGEM =
   "Olá! Encontrei o site da Dra. Rebeca e gostaria de informações sobre consultas e disponibilidade de horários.";
-const TELEFONE_EXIBICAO = "(85) 9929-7113";
+const TELEFONE_EXIBICAO = "(85) 99929-7113";
 const CRM = "CRM 521304941";
 // Preencha quando disponível (deixe "" para ocultar / mostrar "Informações pelo WhatsApp")
 const ENDERECO = "";
