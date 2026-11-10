@@ -16,7 +16,7 @@ const CRM = "CRM 521304941";
 const ENDERECO = "";
 const CIDADE_ESTADO = "";
 const HORARIOS = ""; // exibido no site; no formato schema, ex.: "Mo-Fr 08:00-18:00" pode ser usado em HORARIOS_SCHEMA
-const MODALIDADES = "";
+const MODALIDADES = "Teleconsulta: atendimento online por vídeo";
 const INSTAGRAM_USUARIO = "_rebecacarvalho"; // ex.: "drarebeca"
 /* =================================================== */
 
