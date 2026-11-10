@@ -14,7 +14,7 @@ const TELEFONE_EXIBICAO = "(85) 99929-7113";
 const CRM = "CRM 521304941";
 // Preencha quando disponível (deixe "" para ocultar / mostrar "Informações pelo WhatsApp")
 const ENDERECO = "Fortaleza";
-const CIDADE_ESTADO = "-CE";
+const CIDADE_ESTADO = "CE";
 const HORARIOS = ""; // exibido no site; no formato schema, ex.: "Mo-Fr 08:00-18:00" pode ser usado em HORARIOS_SCHEMA
 const MODALIDADES = "Teleconsulta: atendimento online por vídeo";
 const INSTAGRAM_USUARIO = "_rebecacarvalho"; // ex.: "drarebeca"
