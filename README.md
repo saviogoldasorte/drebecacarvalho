@@ -237,3 +237,4 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+Teste de sync - 16/11
