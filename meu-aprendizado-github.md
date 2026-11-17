@@ -1,6 +1,6 @@
 # Meu aprendizado com GitHub
 
-Estou aprendendo a trabalhar com Git e GitHub.
+Estou evoluindo meus conhecimentos em desenvolvimento de software.
 
 Já aprendi:
 - O que é um repositório.
